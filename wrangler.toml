@@ -1,4 +1,4 @@
-name = "shyam-shrestha-portfolio"
+name = "portfolio"
 main = ".open-next/worker.js"
 compatibility_date = "2026-05-25"
 compatibility_flags = ["nodejs_compat", "global_fetch_strictly_public"]
@@ -9,4 +9,10 @@ binding = "ASSETS"
 
 [[services]]
 binding = "WORKER_SELF_REFERENCE"
-service = "shyam-shrestha-portfolio"
+service = "portfolio"
+
+[observability]
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+invocation_logs = true
