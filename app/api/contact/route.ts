@@ -1,9 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 
-const DISCORD_WEBHOOK_URL = process.env.DISCORD_WEBHOOK_URL!;
-
 export async function POST(req: NextRequest) {
   try {
+    const discordWebhookUrl = process.env.DISCORD_WEBHOOK_URL;
+    if (!discordWebhookUrl) {
+      return NextResponse.json({ error: "Contact form is not configured." }, { status: 500 });
+    }
+
     const { name, email, message } = await req.json();
 
     if (!name || !email || !message) {
@@ -28,7 +31,7 @@ export async function POST(req: NextRequest) {
       ],
     };
 
-    const res = await fetch(DISCORD_WEBHOOK_URL, {
+    const res = await fetch(discordWebhookUrl, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
