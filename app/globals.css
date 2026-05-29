@@ -96,4 +96,73 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+
+  /* Theme Transition Overlay */
+  .theme-switching, .theme-switching * {
+    transition: background-color 0.8s ease-in-out, border-color 0.8s ease-in-out, color 0.8s ease-in-out, box-shadow 0.8s ease-in-out !important;
+  }
+
+  .theme-transition-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    pointer-events: none;
+    clip-path: circle(0% at 90% 10%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  
+  .theme-transition-overlay.animating {
+    animation: theme-wipe 1200ms cubic-bezier(0.25, 1, 0.35, 1) forwards;
+  }
+
+  .theme-transition-overlay.sunrise {
+    background: radial-gradient(
+      circle at 90% 10%,
+      rgba(255, 248, 230, 1) 0%,
+      rgba(255, 235, 180, 0.85) 35%,
+      rgba(255, 255, 255, 0.4) 70%,
+      transparent 100%
+    );
+  }
+
+  .theme-transition-overlay.nightfall {
+    background: radial-gradient(
+      circle at 90% 10%,
+      rgba(2, 4, 8, 1) 0%,
+      rgba(5, 12, 25, 0.9) 35%,
+      rgba(10, 20, 40, 0.5) 70%,
+      transparent 100%
+    );
+  }
+
+  @keyframes theme-wipe {
+    0% {
+      clip-path: circle(0% at 90% 10%);
+      opacity: 1;
+    }
+    50% {
+      clip-path: circle(150% at 90% 10%);
+      opacity: 1;
+    }
+    100% {
+      clip-path: circle(150% at 90% 10%);
+      opacity: 0;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .theme-transition-overlay {
+      clip-path: none;
+    }
+    .theme-transition-overlay.animating {
+      animation: theme-fade 800ms ease-in-out forwards;
+    }
+  }
+
+  @keyframes theme-fade {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
 }

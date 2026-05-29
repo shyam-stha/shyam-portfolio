@@ -27,9 +27,7 @@ export function CursorLight() {
     <motion.div
       className="pointer-events-none fixed inset-0 z-30 transition duration-300"
       animate={{
-        background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, ${
-          theme === "night" ? "rgba(29, 78, 216, 0.15)" : "rgba(0, 0, 0, 0.08)"
-        }, transparent 80%)`,
+        background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, var(--cursor-glow), transparent 80%)`,
       }}
     />
   );

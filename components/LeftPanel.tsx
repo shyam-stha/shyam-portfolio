@@ -3,6 +3,7 @@
 import { usePortfolio } from "../app/context/PortfolioContext";
 import { navigationItems } from "../data/portfolioData";
 import { Github, Linkedin, Instagram, Mail, FileText } from "lucide-react";
+import { LocalTime } from "./LocalTime";
 
 export function LeftPanel() {
   const { activeSection, setActiveSection } = usePortfolio();
@@ -53,23 +54,26 @@ export function LeftPanel() {
         </nav>
       </div>
 
-      <div className="mt-12 lg:mt-0 flex items-center gap-6">
-        <a href="https://github.com" target="_blank" rel="noreferrer" className="text-secondary hover:text-accent transition-colors" aria-label="GitHub">
-          <Github className="w-6 h-6" />
-        </a>
-        <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-secondary hover:text-accent transition-colors" aria-label="LinkedIn">
-          <Linkedin className="w-6 h-6" />
-        </a>
-        <a href="https://instagram.com" target="_blank" rel="noreferrer" className="text-secondary hover:text-accent transition-colors" aria-label="Instagram">
-          <Instagram className="w-6 h-6" />
-        </a>
-        <a href="mailto:hello@example.com" className="text-secondary hover:text-accent transition-colors" aria-label="Email">
-          <Mail className="w-6 h-6" />
-        </a>
-        <a href="/shyam-resume.pdf" target="_blank" rel="noreferrer" className="text-secondary hover:text-accent transition-colors flex items-center gap-2 text-sm font-medium" aria-label="Resume">
-          <FileText className="w-5 h-5" />
-          <span className="hidden sm:inline">Resume</span>
-        </a>
+      <div className="mt-12 lg:mt-auto flex flex-col gap-6">
+        <div className="flex items-center gap-6">
+          <a href="https://github.com" target="_blank" rel="noreferrer" className="text-secondary hover:text-accent transition-colors" aria-label="GitHub">
+            <Github className="w-6 h-6" />
+          </a>
+          <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="text-secondary hover:text-accent transition-colors" aria-label="LinkedIn">
+            <Linkedin className="w-6 h-6" />
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noreferrer" className="text-secondary hover:text-accent transition-colors" aria-label="Instagram">
+            <Instagram className="w-6 h-6" />
+          </a>
+          <a href="mailto:hello@example.com" className="text-secondary hover:text-accent transition-colors" aria-label="Email">
+            <Mail className="w-6 h-6" />
+          </a>
+          <a href="/shyam-resume.pdf" target="_blank" rel="noreferrer" className="text-secondary hover:text-accent transition-colors flex items-center gap-2 text-sm font-medium" aria-label="Resume">
+            <FileText className="w-5 h-5" />
+            <span className="hidden sm:inline">Resume</span>
+          </a>
+        </div>
+        <LocalTime />
       </div>
     </header>
   );
