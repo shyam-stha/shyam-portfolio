@@ -8,9 +8,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        background: "var(--bg-color)",
+        primary: "var(--text-primary)",
+        secondary: "var(--text-secondary)",
+        accent: "var(--accent-color)",
+        card: "var(--card-bg)",
+        "card-border": "var(--card-border)",
+        glow: "var(--glow-color)",
+        "cta-bg": "var(--btn-cta-bg)",
+        "cta-btn": "var(--btn-cta-text)",
+        "timeline-rail": "var(--timeline-rail)",
         obsidian: "#030712", /* Slate-950 background */
         charcoal: "#0f172a", /* Slate-900 */
-        card: "rgba(15, 23, 42, 0.45)", /* Glass panel slate background */
         bronze: {
           DEFAULT: "#e2b857", /* Vibrant Champagne Gold */
           light: "#f3d078",

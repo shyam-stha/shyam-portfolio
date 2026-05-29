@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
+import { ThemeProvider } from "./context/ThemeContext";
+import { PortfolioProvider } from "./context/PortfolioContext";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Shyam Shrestha | Full Stack & AI Application Developer",
@@ -20,18 +25,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body className="bg-[#0a0a0c] text-neutral-200 antialiased font-sans">{children}</body>
+    <html lang="en" className={`scroll-smooth theme-night ${inter.className}`}>
+      <body className="antialiased transition-colors duration-300">
+        <ThemeProvider>
+          <PortfolioProvider>
+            {children}
+          </PortfolioProvider>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
-
-
