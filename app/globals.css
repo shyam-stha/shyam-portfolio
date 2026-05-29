@@ -15,6 +15,7 @@
     --btn-cta-bg: #09090b; /* Dark background */
     --btn-cta-text: #f8fafc; /* Light text */
     --timeline-rail: rgba(255, 255, 255, 0.15);
+    --text-highlight: #e2e8f0; /* Off-white for night mode */
   }
 
   .theme-night {
@@ -28,6 +29,7 @@
     --btn-cta-bg: #09090b; /* Dark background */
     --btn-cta-text: #f8fafc; /* Light text */
     --timeline-rail: rgba(255, 255, 255, 0.15);
+    --text-highlight: #e2e8f0;
   }
 
   .theme-day {
@@ -41,6 +43,7 @@
     --btn-cta-bg: var(--accent-color);
     --btn-cta-text: #ffffff;
     --timeline-rail: rgba(0, 0, 0, 0.15);
+    --text-highlight: #334155; /* Off-black for day mode */
   }
 
   body {

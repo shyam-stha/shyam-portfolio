@@ -11,6 +11,7 @@ const config: Config = {
         background: "var(--bg-color)",
         primary: "var(--text-primary)",
         secondary: "var(--text-secondary)",
+        highlight: "var(--text-highlight)",
         accent: "var(--accent-color)",
         card: "var(--card-bg)",
         "card-border": "var(--card-border)",

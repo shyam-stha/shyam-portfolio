@@ -13,10 +13,10 @@ export function AboutSection() {
     >
       <div className="text-secondary leading-relaxed space-y-4">
         <p>
-          I am a passionate software engineer focused on crafting polished, intelligent, and scalable digital experiences. With a background in full-stack development, I enjoy bridging the gap between design and robust backend architectures.
+          I am a passionate <span className="text-highlight font-medium">software engineer</span> focused on crafting polished, intelligent, and scalable digital experiences. With a background in <span className="text-highlight font-medium">full-stack development</span>, I enjoy bridging the gap between design and robust backend architectures.
         </p>
         <p>
-          My recent work revolves around AI-assisted workflows and building autonomous agent systems that help users achieve more with less friction. I believe in clean code, accessible interfaces, and the power of subtle motion to bring products to life.
+          My recent work revolves around <span className="text-highlight font-medium">AI-assisted workflows</span> and building <span className="text-highlight font-medium">autonomous agent systems</span> that help users achieve more with less friction. I believe in <span className="text-highlight font-medium">clean code</span>, <span className="text-highlight font-medium">accessible interfaces</span>, and the power of <span className="text-highlight font-medium">subtle motion</span> to bring products to life.
         </p>
       </div>
 

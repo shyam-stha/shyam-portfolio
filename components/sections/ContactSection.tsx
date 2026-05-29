@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Send, Loader2 } from "lucide-react";
+import { ArrowUpRight, Send, Loader2, MessageCircle } from "lucide-react";
 
 export function ContactSection() {
   const [message, setMessage] = useState("");
@@ -52,8 +52,8 @@ export function ContactSection() {
         <h2 className="text-3xl lg:text-5xl font-bold text-primary mb-6">
           Want to build something sharp?
         </h2>
-        <p className="text-lg text-secondary max-w-md mb-8 leading-relaxed">
-          I’m open to frontend, full-stack, product engineering, and AI-assisted web projects.
+        <p className="text-secondary mb-8 leading-relaxed">
+          I’m open to frontend, full-stack, product engineering, and AI-assisted web projects. Based in Bhaktapur, Nepal.
         </p>
 
         {/* Quick Anonymous Message Form */}
@@ -113,7 +113,7 @@ export function ContactSection() {
 
         <div className="flex flex-col sm:flex-row gap-4 mb-16 relative z-10">
           <a
-            href="mailto:hello@example.com"
+            href="mailto:shyam.shrestha.dev@gmail.com"
             className="relative group flex items-center justify-between px-8 py-5 rounded-full overflow-hidden transition-all duration-500 active:scale-[0.98]"
           >
             {/* Base card surface */}
@@ -127,7 +127,7 @@ export function ContactSection() {
           </a>
 
           <a
-            href="https://linkedin.com"
+            href="https://linkedin.com/in/shyam-stha"
             target="_blank"
             rel="noreferrer"
             className="relative group flex items-center justify-between px-8 py-5 rounded-full overflow-hidden transition-all duration-500 active:scale-[0.98]"
@@ -141,14 +141,30 @@ export function ContactSection() {
             <span className="relative z-10 font-semibold text-primary tracking-wide">LinkedIn</span>
             <ArrowUpRight className="relative z-10 w-5 h-5 text-secondary group-hover:text-accent group-hover:-translate-y-1 group-hover:translate-x-1 transition-all duration-300" />
           </a>
+
+          <a
+            href="https://wa.me/9779869135166"
+            target="_blank"
+            rel="noreferrer"
+            className="relative group flex items-center justify-between px-8 py-5 rounded-full overflow-hidden transition-all duration-500 active:scale-[0.98]"
+          >
+            {/* Base card surface */}
+            <div className="absolute inset-0 rounded-full bg-card border border-card group-hover:border-accent/40 transition-colors duration-500" />
+
+            {/* Subtle accent hover wash */}
+            <div className="absolute inset-0 bg-gradient-to-r from-accent/0 via-accent/5 to-accent/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+            <span className="relative z-10 font-semibold text-primary tracking-wide">WhatsApp</span>
+            <MessageCircle className="relative z-10 w-5 h-5 text-secondary group-hover:text-accent group-hover:-translate-y-1 group-hover:translate-x-1 transition-all duration-300" />
+          </a>
         </div>
       </div>
 
       <footer className="mt-auto pt-8 border-t border-card">
-        <p className="text-xs text-secondary opacity-60 leading-loose">
-          Hand-crafted by Shyam Shrestha in Visual Studio Code.<br />
-          Built with Next.js, Tailwind CSS, and Framer Motion.<br />
-          Deployed on Cloudflare. Set in Inter.
+        <p className="text-xs text-secondary leading-relaxed">
+          <span className="opacity-60">Hand-crafted by</span> <span className="text-highlight font-medium">Shyam Shrestha</span> <span className="opacity-60">in</span> <span className="text-highlight font-medium">Visual Studio Code</span>.<br />
+          <span className="opacity-60">Built with</span> <span className="text-highlight font-medium">Next.js</span>, <span className="text-highlight font-medium">Tailwind CSS</span>, <span className="opacity-60">and</span> <span className="text-highlight font-medium">Framer Motion</span>.<br />
+          <span className="opacity-60">Deployed on</span> <span className="text-highlight font-medium">Cloudflare</span>. <span className="opacity-60">Set typeface in</span> <span className="text-highlight font-medium">Inter</span>.
         </p>
       </footer>
     </motion.div>
