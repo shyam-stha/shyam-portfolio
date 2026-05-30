@@ -37,9 +37,10 @@ export function AboutSection() {
         </a>
 
         <a
-          href="/shyam-resume.pdf"
+          href="/shyam-shrestha.pdf"
           target="_blank"
           rel="noreferrer"
+          download
           className="relative inline-flex items-center gap-2 px-8 py-4 rounded-full group overflow-hidden transition-all duration-500 hover:scale-[1.02] active:scale-[0.98]"
         >
           {/* Base card surface */}
